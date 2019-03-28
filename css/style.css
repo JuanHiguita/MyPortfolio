@@ -1,0 +1,225 @@
+body{
+  font-size:16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color:#4a4a4a;
+}
+/*background image config*/
+.background{
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.background::before {
+  -webkit-filter: brightness(0.3) blur(5px);
+  z-index:-1;
+  content: " ";
+  display:block;
+  background-image: url("../src/MyBackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+	height: 100vh;
+	width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow:hidden;
+  transform: scale(1.1);
+}
+/*Hero Section Styles*/
+.hero{
+  height:100vh;
+}
+.hero .welcome{
+  z-index:1;
+  position: relative;
+  color:#ffffff;
+  text-align:center;
+}
+.hero .welcome .container .row .welcome-subtitle{
+  color: #FC6161;
+  margin-top: 10em;
+}
+.hero .welcome .container .row .welcome-title{
+  font-size: 4.25em;
+}
+.hero .welcome .container .row .welcome-intro{
+  font-size: 2em;
+}
+.hero .welcome .container .row .welcome-intro::before {
+  content: "|";
+  text-align: center;
+  display: inline-block;
+  padding: 0 14px 0 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.hero .welcome .container .row .welcome-intro::after {
+  content: "|";
+  text-align: center;
+  display: inline-block;
+  padding: 0 8px 0 14px;
+  color: rgba(255, 255, 255, 0.3);
+}
+/*About Me Section Styles*/
+.AboutMe{
+  text-align:justify;
+  padding-top:5em;
+}
+.title {
+  text-align:center;
+  color: #FC6161;
+}
+.AboutMe .container .row .aboutMe-container .aboutMeDescription a{
+  color:#FC6161;
+  text-decoration: none;
+}
+.AboutMe .container .row .aboutMe-container .aboutMe-myInfo ul li span{
+  text-decoration:none;
+  color:#747474;
+}
+.AboutMe .container .row .mySkills ul li p{
+  margin-bottom: 0;
+}
+.AboutMe .container .row .mySkills ul li .progress .progress-bar{
+  background-color: #FC6161;
+}
+.AboutMe .container .row .mySkills ul li .progress{
+  margin-bottom: 1em;
+}
+.AboutMe .container .row .development-tools{
+  text-align: center;
+}
+.AboutMe .container .row .development-tools .development-tools-title{
+  color:#363636;
+}
+/*My work section*/
+#MyWork{
+  background-color:whitesmoke;
+  text-align: justify;
+}
+#MyWork .container .row .work-date{
+    color:#363636;
+}
+#MyWork .container .row .recent-work .row article{
+    margin: 0 auto;
+}
+#MyWork .container .row .recent-work .row figure img{
+  border-radius: 12px;
+  border: 1px solid gray;
+  margin: 0;
+}
+
+#MyWork .container .row .recent-work .row article figure .overlay {
+  display: flex;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  background: rgb(29, 29, 29);
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 12px;
+  margin: -150px 0 0 0px;
+}
+#MyWork .container .row .recent-work .row article figure:hover .overlay {
+    opacity: 1;
+  }
+
+#MyWork .container .row .recent-work .row article figure .overlay a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+/*Contact Me Section Styles*/
+#ContactMe form .container .form-row .name-field input:active, #ContactMe form .container .form-row .email-field input:active,
+#ContactMe form .container .form-row .message-field textarea:active{
+  border: 1px solid #FC6161;
+}
+#ContactMe form .container .form-row .submit-form-button{
+  margin: auto;
+  color: white;
+  height: 2.5em;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, #fc6161 0%, #ff9191 51%, #fc6161 100%);
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+#ContactMe form .container .form-row .submit-form-button:hover{
+  background-position: right center;
+}
+
+/*footer*/
+footer{
+  text-align:center;
+  background-color:rgb(29, 29, 29);
+}
+footer .social ul li{
+  width: 3em;
+  height: 3em;
+  margin:20px 10px 0;
+  display: inline-grid;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+  transition: all 0.5s ease;
+}
+footer .social ul li a i{
+  margin-top:6px;
+}
+footer .social ul li .fa{
+  color: #FFFFFF;
+  transition: all 0.5s ease;
+}
+/*Facebook footer button*/
+footer .social ul li:hover.facebook{
+  border: 2px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+footer .social ul li:hover .fa-facebook {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+/*Twitter footer button*/
+footer .social ul li:hover.twitter {
+  border: 2px solid #55acee;
+  box-shadow: 0 0 15px #55acee;
+  transition: all 0.5s ease;
+}
+footer .social ul li:hover .fa-twitter {
+  color: #55acee;
+  text-shadow: 0 0 15px #55acee;
+  transition: all 0.5s ease;
+}
+/*Linkedin footer button*/
+footer .social ul li:hover.linkedin{
+  border: 2px solid #0077B5;
+  box-shadow: 0 0 15px #0077B5;
+  transition: all 0.5s ease;
+}
+footer .social ul li:hover .fa-linkedin {
+  color: #0077B5;
+  text-shadow: 0 0 15px #0077B5;
+  transition: all 0.5s ease;
+}
+/*Github footer button*/
+footer .social ul li:hover.github{
+  border: 2px solid #767676;
+  box-shadow: 0 0 15px #767676;
+  transition: all 0.5s ease;
+}
+footer .social ul li:hover .fa-github {
+  color: #767676;
+  text-shadow: 0 0 15px #767676;
+  transition: all 0.5s ease;
+}
+footer .copyright p{
+  color: #ffffff;
+  margin-bottom:0;
+}
