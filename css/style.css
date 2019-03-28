@@ -30,39 +30,77 @@ body{
   transform: scale(1.1);
 }
 /*Hero Section Styles*/
-.hero{
-  height:100vh;
+
+  .hero{
+    height:100vh;
+  }
+  .hero .welcome{
+    z-index:1;
+    position: relative;
+    color:#ffffff;
+    text-align:center;
+  }
+  .hero .welcome .container .row .welcome-subtitle{
+    color: #FC6161;
+    margin-top: 10em;
+  }
+  .hero .welcome .container .row .welcome-title{
+    font-size: 4.25em;
+  }
+  .hero .welcome .container .row .welcome-intro{
+    font-size: 2em;
+  }
+  .hero .welcome .container .row .welcome-intro::before {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .hero .welcome .container .row .welcome-intro::after {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 8px 0 14px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+@media screen and (max-width:480px){
+  .hero{
+    height:100vh;
+  }
+  .hero .welcome{
+    z-index:1;
+    position: relative;
+    color:#ffffff;
+    text-align:center;
+  }
+  .hero .welcome .container .row .welcome-subtitle{
+    color: #FC6161;
+    margin-top: 6em;
+  }
+  .hero .welcome .container .row .welcome-title{
+    font-size: 2.25em;
+  }
+  .hero .welcome .container .row .welcome-intro{
+    font-size: 1.5em;
+  }
+  .hero .welcome .container .row .welcome-intro::before {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 14px 0 8px;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  .hero .welcome .container .row .welcome-intro::after {
+    content: "|";
+    text-align: center;
+    display: inline-block;
+    padding: 0 8px 0 14px;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
-.hero .welcome{
-  z-index:1;
-  position: relative;
-  color:#ffffff;
-  text-align:center;
-}
-.hero .welcome .container .row .welcome-subtitle{
-  color: #FC6161;
-  margin-top: 10em;
-}
-.hero .welcome .container .row .welcome-title{
-  font-size: 4.25em;
-}
-.hero .welcome .container .row .welcome-intro{
-  font-size: 2em;
-}
-.hero .welcome .container .row .welcome-intro::before {
-  content: "|";
-  text-align: center;
-  display: inline-block;
-  padding: 0 14px 0 8px;
-  color: rgba(255, 255, 255, 0.3);
-}
-.hero .welcome .container .row .welcome-intro::after {
-  content: "|";
-  text-align: center;
-  display: inline-block;
-  padding: 0 8px 0 14px;
-  color: rgba(255, 255, 255, 0.3);
-}
+
 /*About Me Section Styles*/
 .AboutMe{
   text-align:justify;
